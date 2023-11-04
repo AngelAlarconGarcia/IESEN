@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Poppins&family=Roboto&display=swap');
+//Estilo del cuerpo del contenido
+section{
+    padding: 0 80px;
+    position: relative;
+    z-index: 1;
+    overflow: auto;
+    background-color: #f6f8fc;
+    margin-bottom: -15px;
+}
+//Estilo de principal
+.container {
+    display: flex;
+    width: 100%;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    height: 100vh;
+}
+  
+.box {
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    border-radius: 30px;
+    margin: 0 1%;
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+    line-height: 0;
+    background-color: #0359e3d7;
+}
+  
+.box > .imgbox {
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover; 
+    transition: .5s;
+}
+  
+.box > span {
+    font-family: 'Roboto';
+    color: azure;
+    font-size: 3.8vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+}
+  
+.box:hover { flex: 1 1 50%; }
+.box:hover > .imgbox {
+    width: 100%;
+    height: 100%;
+}
+//Estilo de Destacado
+.containerstar {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    padding: 0 30px;
+    align-items: center;
+    flex-direction: row;
+    
+    
+}
+
+.destacados{
+    background: rgb(177,167,0);
+    background: linear-gradient(0deg,rgba(177,167,0,1) 0%, rgba(218,220,0,1) 15%, rgba(254,255,0,0) 48%);
+    height: 20%;
+    border-radius: 5px;
+}
+.wrapper {
+    width: 33.3%;
+    height: 100%;
+    padding: 10px;
+}
+.wrapper >.star {
+    position: relative;
+    max-height: 300px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow:
+    0 1.4px 1.7px rgba(0, 0, 0, 0.017),
+    0 3.3px 4px rgba(0, 0, 0, 0.024),
+    0 6.3px 7.5px rgba(0, 0, 0, 0.03),
+    0 11.2px 13.4px rgba(0, 0, 0, 0.036),
+    0 20.9px 25.1px rgba(0, 0, 0, 0.043),
+    0 50px 60px rgba(0, 0, 0, 0.06);
+    
+    .hide { opacity: 0; }
+
+    h2, p {
+      position: absolute;
+      color: #b4d1ff;
+      text-shadow: 2px 2px 2px black;
+      z-index: 2;
+      width: 100%;
+      transition: opacity 0.2s, transform 0.3s;
+    }
+    
+    h2 {
+      font-weight: 800;
+      font-size: 22px;
+      margin-bottom: 0;
+      letter-spacing: 1px;
+    }
+    
+    p {
+      bottom: 0;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    
+    &:hover {
+      transition: all .3s ease-in-out;
+    }
+    
+    &:hover:before {
+      transition: all .3s ease-in-out;
+    }
+    
+    .imgdest {
+      position:relative;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      transition: all .3s ease-in-out;
+      
+      &:hover {
+        transition: all .3s ease-in-out;
+      }
+      
+      &:after {
+        content: '';
+        position: absolute;
+        background-color: rgba(0,0,0,.6);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+      
+      &:hover {
+        transition: all .3s ease-in-out;
+      }
+    }
+}
+.vintage {
+    h2 { 
+      top: 50%;
+      transform: translate3d(0, 60px, 0);
+      text-align: center; 
+    }
+    
+    p { 
+      opacity: 0;
+      bottom: 0;
+      transform: translate3d(0, -10px, 0);
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    
+    &:before {
+      content:'';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+      z-index: 2;
+      bottom: -100%;
+      left: 0;
+    }
+    
+    &:hover:before {
+      bottom: 0;
+    }
+    
+    &:hover {
+      h2 {
+        bottom: 40px;
+        transform: translate3d(0, 20px, 0);
+      }
+      
+      p {
+        opacity: 1;
+        transform: translate3d(0, -13px, 0);
+      }
+    }
+  }
+
+
+//Estilo de Acerca de nosotros
+.about{
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 20px;
+    line-height: 1.2em  ;
+    color: #0359e3d7;
+}
+hr{
+    color: rgb(0, 0, 0);
+    height: 2px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #0000001a;
+    box-sizing: initial;
+}
+.content-infos{
+    display: flex;
+    flex-wrap: nowrap ;
+}
+
+.info{
+    font-family: Poppins,sans-serif;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #4d4d4d;;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.title{
+    color: #d3c11c;
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 30px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.left{
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.rigth{
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+
+//Contancto
+.contact{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.contentContact{
+  display: flex;
+}
+
+.contentIcons{
+  width: 65%;
+  display: flex;
+  font-size: 15px;
+  color: #878787;
+  text-align: right;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+textarea{
+  font-family: Poppins,sans-serif;
+  resize: none;
+  margin: 5px;
+  width: 98%;
+  border: 1px solid #e5e6e9;
+}
+input{
+  font-family: Poppins,sans-serif;
+  margin: 15px;
+  width: 45%;
+  border: 1px solid #e5e6e9;
+  height: 45px;
+}
+.inputAsunto{
+  width: 98%;
+}
+.writezone{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 15px;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.infoContact{
+  margin: 10px;
+}
+.formsection{
+  border: 1px solid #e5e6e9;
+  background-color: #f7f7f7;
+  margin: 10px;
+  height: auto;
+}
+.buttonsend{
+  display: flex;
+  justify-content: left;
+  margin-left: 15px;
+  padding-left: 30px;
+  margin-bottom: 15px;
+}
+.sendButton{
+  font-family: Poppins,sans-serif;
+  color: #f6f8fc;
+  background-color: #0359e3d7;
+  width: 10%;
+  height: 45px;
+  
+}
+.sendButton:hover{
+  background-color:#3174dfad;
+  cursor: pointer;
+}
+
+.is-invalid{
+  color: red;
+}
+.is-valid{
+  color:green;
+}
+
+//FOOTER
+footer{
+  position:sticky;
+  z-index: 999;
+  top: 0;
+}
+.ul3{
+  box-shadow: 0px -6px 6px -1px rgba(0, 0, 0, 0.20);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerfooter{
+  background-color: #080691;
+  height: 5.5em;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+}
+.copy_right{
+  font-family: Poppins,sans-serif;
+  color: #fff;
+  text-align: center;
+}
