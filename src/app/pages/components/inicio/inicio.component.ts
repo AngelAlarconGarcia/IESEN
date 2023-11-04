@@ -45,7 +45,7 @@ export class InicioComponent{
   async EnviarCorreo(){
     emailjs.init('O6TM2xYttg51HdD6H')
     let respuesta = await emailjs.send("service_kkiy4hu","template_c95nzge",{
-      mensaje: this.FormMessages.controls.message.value,
+      message: this.FormMessages.controls.message.value,
       correo:  this.FormMessages.controls.correo.value,
       nombre:  this.FormMessages.controls.nombre.value,
       asunto:  this.FormMessages.controls.asunto.value,
